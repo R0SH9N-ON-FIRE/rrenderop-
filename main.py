@@ -1,5 +1,5 @@
 from flask import Flask, request, render_template_string
-import requests, datetime, os, pyttsx3
+import requests, datetime
 
 app = Flask(__name__)
 os.makedirs("logs", exist_ok=True)
