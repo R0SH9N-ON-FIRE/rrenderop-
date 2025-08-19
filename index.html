@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RoshanMessenger 🌈</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="/static/voice.js"></script>
+</head>
+<body>
+  <div class="intro">
+    <img src="/static/roshan.jpg" class="avatar">
+    <h1 class="rainbow">🌈 Powered by ROSHAN 🌈</h1>
+    <p>Automate with Style — Hindi & English UI</p>
+  </div>
+
+  <form method="POST">
+    <label>🔐 Access Token:</label><br>
+    <input type="text" name="token" required><br><br>
+
+    <label>👤 Recipient ID:</label><br>
+    <input type="text" name="recipient" required><br><br>
+
+    <label>💬 Message (Hindi/English):</label><br>
+    <textarea name="message" rows="4" required></textarea><br><br>
+
+    <label>🌐 Language:</label><br>
+    <select id="lang" onchange="setLang(this.value)">
+      <option value="hi-IN">Hindi</option>
+      <option value="en-US">English</option>
+    </select><br><br>
+
+    <button type="submit">🚀 Send Message</button>
+    <button type="button" onclick="speak()">🔊 Voice Preview</button>
+  </form>
+
+  <p>{{ status }}</p>
+</body>
+</html>
